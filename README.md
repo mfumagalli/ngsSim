@@ -1,0 +1,4 @@
+ngsSim
+======
+
+NGS data simulator
