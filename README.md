@@ -1,6 +1,6 @@
 # ngsSim
 
-Program to simulate NGS data for up to 3 populations. It allows for variablle error rates, sequencing depth, variability, base frequencies, individual inbreeding coefficients or _Fst_. It outputs true genotypes, reads and genotype likelihoods.
+Program to simulate NGS data for up to 3 populations. It allows for variablle error rates, sequencing depth, variability, base frequencies, individual inbreeding coefficients or _Fst_. It outputs true genotypes, reads and genotype likelihoods. 
 
 ### Instalation
 
@@ -39,3 +39,5 @@ Executables are built in the main directory. If you wish to clean all binaries a
     -seed: Random number seed [0]
     -base_freq: Background allele frequencies for A,C,G,T [0.25 0.25 0.25 0.25]
     -expansion: Very naive method to simulate population expansion, boolean [0]
+
+

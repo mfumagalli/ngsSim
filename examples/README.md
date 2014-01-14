@@ -1,5 +1,7 @@
 # Data simulation
 
+`ngsSim` simulates data under a constant population size model. A simple model that mimics the effects of population expansion is implemented using the option `-expansion 1`.
+
 ### Settings:
 
 * 3 populations, where the closest populations (2nd and 3rd) differ from an average FST of 0.1 and these differ from the other one from an average FST of 0.3;
@@ -24,5 +26,5 @@ This will generate several files for the whole population (testA), as well as fo
 * `.frq`: true Site Frequency Spectrum, tab-separated, from 0 to 48 frequencies of derived alleles;
 * `.args`: arguments used in the simulation;
 * `.par`: simulation settings at each site (on rows): drawn ancestral population allele frequency, inbreeding coefficient, first value of FST, second value of FST;
-* `.seq.gz`: sequencing reads in ACGT format, with A always representing the ancestral state;
+* `.seq.gz`: sequencing reads in ACGT format, with A always representing the ancestral state; each row represents a site for each population, with individual reads being tab-separated;
 * `.glf.gz`: genotype likelihoods as doubles in binary format;
