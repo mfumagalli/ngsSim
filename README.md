@@ -2,7 +2,7 @@
 
 Program to simulate NGS data for up to 3 populations. It allows for variablle error rates, sequencing depth, variability, base frequencies, individual inbreeding coefficients or _Fst_. It outputs true genotypes, reads and genotype likelihoods. 
 
-### Instalation
+### Installation
 
 To download use:
 
@@ -30,7 +30,7 @@ Executables are built in the main directory. If you wish to clean all binaries a
     -nind: Number of diploid individuals for each population [10]
     -nsites: Number of sites [500000]
     -errate: The sequencing error rate [0.0075]
-    -depthMean: sequencing depth OR file with individual depths per line [5]
+    -depth: sequencing depth OR file with individual depths per line [5]
     -pvar: Probability that a site is variable in the population [0.015]
     -mfreq: Minimum population frequency [0.0005]
     -F: FST value of 1st and 2nd split [0.4 0.1] OR inbreeding value/file in case of 1 pop [0]
