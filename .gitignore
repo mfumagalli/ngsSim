@@ -1,3 +1,4 @@
 ngsSim
 *.o
-examples/
+examples/testA*
+examples/testF.*
