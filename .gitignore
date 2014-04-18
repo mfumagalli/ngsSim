@@ -2,3 +2,4 @@ ngsSim
 *.o
 examples/testA*
 examples/testF.*
+examples/test.log
