@@ -15,6 +15,8 @@ a0cb8595d83b845eea899e5fdd667a82  testA3.geno
 01ca2cc07f4a400a0fdd8a886ffe010c  testA3.reads.txt
 16870119eb21875214e023310cdc2df7  testA3.seq.gz
 ca79f47266af34450003d2b0867b9cfc  testA.args
+1f044eb555eb80edfc110ec00ae44e57  testAF.ANC.fai
+90831d2ad83e63ecece79dc95bf5c01d  testAF.ANC.fas
 86f5ddab8415636dc5866d606c96d89d  testA.frq
 64d323bf6e8d4f28b86dedf25e08d499  testA.geno
 1c425338f243ac738afa957489c8408d  testA.glf.gz
