@@ -1,9 +1,4 @@
 
-IMPORTANT NOTE:
-These examples may not work with more recent versions of ANGSD.
-We will update everything when a stable final version of ANGSD will be available.
-In doubt, please contact the authors for questions on the usage of ngsTools with the current version of ANGSD.
-
 # Data simulation
 
 `ngsSim` simulates data under a constant population size model. A simple model that mimics the effects of population expansion is implemented using the option `-expansion 1`.

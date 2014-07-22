@@ -1,9 +1,4 @@
 
-IMPORTANT NOTE:
-These examples may not work with more recent versions of ANGSD.
-We will update everything when a stable final version of ANGSD will be available.
-In doubt, please contact the authors for questions on the usage of ngsTools with the current version of ANGSD.
-
 # ngsSim
 
 Program to simulate NGS data for up to 3 populations. It allows for variablle error rates, sequencing depth, variability, base frequencies, individual inbreeding coefficients or _Fst_. It outputs true genotypes, reads and genotype likelihoods. 
@@ -39,11 +34,13 @@ Executables are built in the main directory. If you wish to clean all binaries a
     -depth: sequencing depth OR file with individual depths per line [5]
     -pvar: Probability that a site is variable in the population [0.015]
     -mfreq: Minimum population frequency [0.0005]
-    -F: FST value of 1st and 2nd split [0.4 0.1] OR inbreeding value/file in case of 1 pop [0]
+    -F: FST value of 1st and 2nd split [0.4 0.1] OR inbreeding value/file in case of 1 pop [0], if 2 pops just write twice the same unique FST value (e.g. 0.2 0.2)
     -model: 0=fixed errate 1=variable errate (uniform distribution) [1]
     -simpleRand: boolean [1]
     -seed: Random number seed [0]
     -base_freq: Background allele frequencies for A,C,G,T [0.25 0.25 0.25 0.25]
     -expansion: Very naive method to simulate population expansion, boolean [0]
+
+Further examples can be found [here](https://github.com/mfumagalli/ngsSim/tree/master/examples).
 
 
