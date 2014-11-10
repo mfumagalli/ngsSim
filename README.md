@@ -1,7 +1,9 @@
 
 # ngsSim
 
-Program to simulate NGS data for up to 3 populations. It allows for variablle error rates, sequencing depth, variability, base frequencies, individual inbreeding coefficients or _Fst_. It outputs true genotypes, reads and genotype likelihoods. 
+Program to simulate NGS data for up to 3 populations. It allows for variable error rates, sequencing depth, variability, base frequencies, individual inbreeding coefficients or _Fst_. It outputs true genotypes, reads and genotype likelihoods. 
+
+It appears that the newest version of ANGSD does not entirely support ngsSim output anymore. A valid alternative to simulate NGS data that cab ne then processed with ANGSD and ngsTools is [MsToGlf](http://popgen.dk/angsd/index.php/MsToGlf).
 
 ### Installation
 
@@ -13,7 +15,6 @@ To install these tools just run:
 
     % cd ngsSim
     % make
-    % make test
 
 Executables are built in the main directory. If you wish to clean all binaries and intermediate files:
 
