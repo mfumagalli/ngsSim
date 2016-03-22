@@ -24,7 +24,8 @@ perl -s -e 'foreach(1..$n_ind){$x=0; $x+=0.25 if($_/$n_ind > 0.2); $x+=0.25 if($
 
 # Create ANC fasta and fai files for unfolded SAF analyses
 perl -s -e 'print(">chrSIM\n".("A"x$n)."\n");' -- -n=$N_SITES > testAF.ANC.fas
-echo -e "chrSIM\t$N_SITES\t8\t50\t51" > testAF.ANC.fai
+samtools faidx testAF.ANC.fas
+
 
 
 ##### CHECK
