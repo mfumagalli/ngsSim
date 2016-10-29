@@ -30,9 +30,9 @@ samtools faidx testAF.ANC.fas
 
 ##### CHECK
 # Test MD5 checksum
-md5sum testA* testF.* | sort -k 2,2 > /tmp/test.md5
-
-if diff /tmp/test.md5 test.md5 > /dev/null
+TMP=`mktemp`
+md5sum testA* testF.* | sort -k 2,2 > $TMP
+if diff $TMP test.md5 > /dev/null
 then
     echo "ngsSim: All tests OK!"
 else
