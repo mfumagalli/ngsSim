@@ -30,7 +30,7 @@ samtools faidx testAF.ANC.fas
 
 ##### CHECK
 # Test MD5 checksum
-TMP=`mktemp`
+TMP=`mktemp --suffix .ngsSim`
 md5sum testA* testF.* | sort -k 2,2 > $TMP
 if diff $TMP test.md5 > /dev/null
 then
