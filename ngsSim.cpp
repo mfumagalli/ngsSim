@@ -537,6 +537,10 @@ int main(int argc, char *argv[]) { // read input parameters
     for (int i = 0; i < nind; i++)
       indD[i] = meandepth;
   }
+
+  // debug
+  //for (int i = 0; i < nind; i++)
+	//fprintf(stderr, "\n %f", indD[i]);
   
   
   // to adjust the exponential function according to the lowest allele frequency detectable
@@ -821,9 +825,9 @@ int main(int argc, char *argv[]) { // read input parameters
 	int has_reads1 =0, has_reads=0;
 	if (debug) fprintf(stderr,"\nStart writing reads for 1 sample");
 	if (model==0) {
-	  has_reads1=has_reads=print_ind_site2(errate, meandepth, genotype1, resultfile, glffile, ireadsfile, resultfile1, glffile1, ireadsfile1, 0);
+	  has_reads1=has_reads=print_ind_site2(errate, indD[j], genotype1, resultfile, glffile, ireadsfile, resultfile1, glffile1, ireadsfile1, 0);
 	} else {
-	  has_reads1=has_reads=print_ind_site2(2*errate*uniform(seed), meandepth, genotype1, resultfile, glffile, ireadsfile, resultfile1, glffile1, ireadsfile1, 0);
+	  has_reads1=has_reads=print_ind_site2(2*errate*uniform(seed), indD[j], genotype1, resultfile, glffile, ireadsfile, resultfile1, glffile1, ireadsfile1, 0);
 	}
 	if (debug) fprintf(stderr,"\nEnd writing reads for 1 sample");
 	if (j<nind1-1) {
@@ -866,9 +870,9 @@ int main(int argc, char *argv[]) { // read input parameters
 	int has_reads2 =0, has_reads=0;
 	if (debug) fprintf(stderr,"\nStart writing reads for 2 sample");
 	if (model==0) {
-	  has_reads2=has_reads=print_ind_site2(errate, meandepth, genotype2, resultfile, glffile, ireadsfile, resultfile2, glffile2, ireadsfile2, (j+1));
+	  has_reads2=has_reads=print_ind_site2(errate, indD[j]+nind1, genotype2, resultfile, glffile, ireadsfile, resultfile2, glffile2, ireadsfile2, (j+1));
 	} else {
-	  has_reads2=has_reads=print_ind_site2(2*errate*uniform(seed), meandepth, genotype2, resultfile, glffile, ireadsfile, resultfile2, glffile2, ireadsfile2, (j+1));
+	  has_reads2=has_reads=print_ind_site2(2*errate*uniform(seed), indD[j]+nind1, genotype2, resultfile, glffile, ireadsfile, resultfile2, glffile2, ireadsfile2, (j+1));
 	}
 	if (debug) fprintf(stderr,"\nEnd writing reads for 2 sample");
 	
@@ -935,9 +939,9 @@ int main(int argc, char *argv[]) { // read input parameters
 	int has_reads1 =0, has_reads=0;
 	if (debug) fprintf(stderr,"\nStart writing reads for 1 sample");
 	if (model==0) {
-	  has_reads1=has_reads=print_ind_site2(errate, meandepth, genotype1, resultfile, glffile, ireadsfile, resultfile1, glffile1, ireadsfile1, 0);
+	  has_reads1=has_reads=print_ind_site2(errate, indD[j], genotype1, resultfile, glffile, ireadsfile, resultfile1, glffile1, ireadsfile1, 0);
 	} else {
-	  has_reads1=has_reads=print_ind_site2(2*errate*uniform(seed), meandepth, genotype1, resultfile, glffile, ireadsfile, resultfile1, glffile1, ireadsfile1, 0);
+	  has_reads1=has_reads=print_ind_site2(2*errate*uniform(seed), indD[j], genotype1, resultfile, glffile, ireadsfile, resultfile1, glffile1, ireadsfile1, 0);
 	}
 	if (debug) fprintf(stderr,"\nEnd writing reads for 1 sample");
 	if (j<nind1-1) {
@@ -980,9 +984,9 @@ int main(int argc, char *argv[]) { // read input parameters
 	int has_reads2 =0, has_reads=0;
 	if (debug) fprintf(stderr,"\nStart writing reads for 2 sample");
 	if (model==0) {
-	  has_reads2=has_reads=print_ind_site2(errate, meandepth, genotype2, resultfile, glffile, ireadsfile, resultfile2, glffile2, ireadsfile2, (j+1));
+	  has_reads2=has_reads=print_ind_site2(errate, indD[j]+nind1, genotype2, resultfile, glffile, ireadsfile, resultfile2, glffile2, ireadsfile2, (j+1));
 	} else {
-	  has_reads2=has_reads=print_ind_site2(2*errate*uniform(seed), meandepth, genotype2, resultfile, glffile, ireadsfile, resultfile2, glffile2, ireadsfile2, (j+1));
+	  has_reads2=has_reads=print_ind_site2(2*errate*uniform(seed), indD[j]+nind1, genotype2, resultfile, glffile, ireadsfile, resultfile2, glffile2, ireadsfile2, (j+1));
 	}
 	if (debug) fprintf(stderr,"\nEnd writing reads for 2 sample");
 	
@@ -1029,9 +1033,9 @@ int main(int argc, char *argv[]) { // read input parameters
 	int has_reads3 =0, has_reads=0;
 	if (debug) fprintf(stderr,"\nStart writing reads for 3 sample");
 	if (model==0) {
-	  has_reads3=has_reads=print_ind_site2(errate, meandepth, genotype3, resultfile, glffile, ireadsfile, resultfile3, glffile3, ireadsfile3, (j+1));
+	  has_reads3=has_reads=print_ind_site2(errate, indD[j]+nind1+nind2, genotype3, resultfile, glffile, ireadsfile, resultfile3, glffile3, ireadsfile3, (j+1));
 	} else {
-	  has_reads3=has_reads=print_ind_site2(2*errate*uniform(seed), meandepth, genotype3, resultfile, glffile, ireadsfile, resultfile3, glffile3, ireadsfile3, (j+1));
+	  has_reads3=has_reads=print_ind_site2(2*errate*uniform(seed), indD[j]+nind1+nind2, genotype3, resultfile, glffile, ireadsfile, resultfile3, glffile3, ireadsfile3, (j+1));
 	}
 	if (debug) fprintf(stderr,"\nEnd writing reads for 3 sample");
 	
