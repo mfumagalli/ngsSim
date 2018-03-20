@@ -8,14 +8,18 @@ A valid alternative to simulate NGS data that can be then processed with ANGSD a
 
 ### Installation
 
-To download use:
+To install the entire package just download the source code:
 
     % git clone https://github.com/mfumagalli/ngsSim.git
 
-To install these tools just run:
+and run:
 
     % cd ngsSim
     % make
+
+To run the tests:
+
+    % make test
 
 Executables are built in the main directory. If you wish to clean all binaries and intermediate files:
 
