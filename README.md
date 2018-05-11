@@ -8,6 +8,15 @@ A valid alternative to simulate NGS data that can be then processed with ANGSD a
 
 ### Installation
 
+`ngsSim` can be easily installed but has some external dependencies:
+
+* Mandatory:
+  * `gcc`: >= 4.9.2 tested on Debian 7.8 (wheezy)
+  * `zlib`: v1.2.7 tested on Debian 7.8 (wheezy)
+* Optional (only needed for testing or auxilliary scripts):
+  * `md5sum`
+  * `samtools`
+
 To install the entire package just download the source code:
 
     % git clone https://github.com/mfumagalli/ngsSim.git
