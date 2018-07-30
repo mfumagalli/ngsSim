@@ -1,11 +1,12 @@
+CXX ?= g++
 
-CXX?=g++
-CFLAGS=-lm -lz -O3 -Wall
+CXXFLAGS := -O3 -Wall $(CXXFLAGS)
+LDLIBS = -lm -lz
 
 all: ngsSim
 
 ngsSim: ngsSim.cpp rbeta.cpp
-	$(CXX) ngsSim.cpp -o ngsSim $(CFLAGS)
+	$(CXX) $(CXXFLAGS) $(CPPFLAGS) $@.cpp $(LDFLAGS) $(LDLIBS) -o $@
 
 test:
 	@cd examples/; bash test.sh 2> test.log; cd ../
