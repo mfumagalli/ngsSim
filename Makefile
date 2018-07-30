@@ -12,3 +12,5 @@ test:
 
 clean:
 	@rm -rf ngsSim *.o examples/testA* examples/testF.*
+
+.PHONY: all clean test
